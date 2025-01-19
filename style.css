@@ -59,7 +59,14 @@ header {
     grid-auto-flow: dense;
     height: calc(100% - 91px);
     background-image: url("https://www.animalleague.org/wp-content/uploads/2022/02/feature-beth-blog-feb2022.jpg");
-    background-position: center
+    background-repeat: no-repeat;
+    background-position: center;
+    .colorr {
+        cursor:grab;
+    }
+    .colorr:hover {
+        border: 1px solid white
+    }
 
 }
 
@@ -73,9 +80,15 @@ header {
 }
 
 @media (max-width: 768px){
+
+    html, body {
+        overflow: hidden;
+    }
+    
     .wrapper {
         width: 100%;
-        height: 100%;
+        height: 100vh ;
+        box-sizing: border-box;
     }
 
     header {

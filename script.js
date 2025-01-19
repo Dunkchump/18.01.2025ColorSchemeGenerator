@@ -17,8 +17,19 @@ btn.addEventListener("click", function(){
             paletDiv.querySelectorAll('.colorr').forEach((div, i) => {
                 div.style.backgroundColor = "#1F2937";
                 div.textContent = colors[i];
+
+                copyByclick(div)
             });
+
+
         });
 })
 
+
+function copyByclick(el){
+    el.addEventListener("click", ()=>{
+        navigator.clipboard.writeText(el.innerHTML)
+        alert(`The color: ${el.innerHTML} copied`)
+    })
+}
 
