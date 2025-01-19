@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", serif;
+    background-color: #E5E5E5;
+}
+
+.wrapper {
+    background-color: #1F2937;
+    width: 550px;
+    height: 550px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 15px;
+
+    #color {
+        width: 61px;
+        height: 43px;
+        cursor: pointer;
+    }
+
+    #typePalet {
+        width: 312px;
+        background: #1F2937 url(Selector.png) no-repeat calc(100% - 10px);
+        border: 1px solid #D1D5DB;
+        border-radius: 6px;
+        color: #D5D4D8;
+        padding: 9px 13px;
+        appearance: none;
+        font-family: "Inter", serif;
+        cursor: pointer;
+
+    }
+
+    #btn {
+        background-color:#3D4B60;
+        color: #FFFFFF;
+        border: none;
+        border-radius: 6px;
+        padding: 9px 13px;
+        font-family: "Inter", serif;
+        cursor: pointer;
+    }
+
+    
+}
+
+#palet {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 6fr 1fr;
+    grid-auto-flow: dense;
+    height: calc(100% - 91px);
+    background-image: url("https://www.animalleague.org/wp-content/uploads/2022/02/feature-beth-blog-feb2022.jpg");
+    background-position: center
+
+}
+
+#palet > div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); /* Делаем текст читаемым на любом фоне */
+}
+
+@media (max-width: 768px){
+    .wrapper {
+        width: 100%;
+        height: 100%;
+    }
+
+    header {
+        #typePalet {
+            width: 150px;
+            background: #1F2937  ;
+        }
+
+        #color {
+            width: 70px;
+            appearance: none;
+             
+        }
+
+        #btn {
+            width: 100px;
+        }
+    }   
+}
